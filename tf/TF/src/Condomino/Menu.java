@@ -89,6 +89,9 @@ public class Menu extends JFrame {
 	     group.add(rdbtnCadastrarMorador);
 	     group.add(rdbtnVisitaDia);
 	     group.add(rdbtnVisitaMes);
+	     final String radioSelecionado;  
+		 radioSelecionado = group.getSelection().getActionCommand();  
+	
 	    
 	 
 		
@@ -96,37 +99,19 @@ public class Menu extends JFrame {
 		btnOk.addActionListener(new ActionListener() {
 		
 			public void actionPerformed(ActionEvent e) {
-				redirecionamento();
+				
+				redirecionamento(radioSelecionado);
 			}
 		});
 		btnOk.setBounds(140, 195, 156, 33);
 		contentPane.add(btnOk);
 	}
 	
-	private void redirecionamento() {
+	private void redirecionamento(String radioSelecionado) {
 		
 		
 		
-		
-		
-		if(this.rdbtnCadastrarVisitante.isSelected()){
-			
-			
-		}
-		if(this.rdbtnCadastrarMorador.isSelected()){
-			
-			
-		}
-		if(this.rdbtnVisitaDia.isSelected()){
-	
-	
-		}
-	
-		if(this.rdbtnVisitaMes.isSelected()){
-			
-			
-		}
-	
+
 		
 }
 
