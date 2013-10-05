@@ -38,6 +38,15 @@ public class Menu extends JFrame {
 	 * Create the frame.
 	 */
 	public Menu() {
+		
+		JRadioButton rdbtnCadastrarVisitante;
+		JRadioButton rdbtnCadastrarMorador;
+		JRadioButton rdbtnVisitaDia;
+		JRadioButton rdbtnVisitaMes;
+		
+		
+		
+		
 		setTitle("Alpro2 - Menu");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -52,22 +61,22 @@ public class Menu extends JFrame {
 		lblMenu.setBounds(124, 31, 156, 44);
 		contentPane.add(lblMenu);
 		
-		JRadioButton rdbtnCadastrarVisitante = new JRadioButton("Cadastrar Visitante");
+		rdbtnCadastrarVisitante = new JRadioButton("Cadastrar Visitante");
 		rdbtnCadastrarVisitante.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		rdbtnCadastrarVisitante.setBounds(32, 102, 156, 23);
 		contentPane.add(rdbtnCadastrarVisitante);
 		
-		JRadioButton rdbtnCadastrarMorador = new JRadioButton("Cadastrar Morador");
+		rdbtnCadastrarMorador = new JRadioButton("Cadastrar Morador");
 		rdbtnCadastrarMorador.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		rdbtnCadastrarMorador.setBounds(32, 128, 156, 23);
 		contentPane.add(rdbtnCadastrarMorador);
 		
-		JRadioButton rdbtnVisitaDia = new JRadioButton("Consultar Visitas do Dia");
+		rdbtnVisitaDia = new JRadioButton("Consultar Visitas do Dia");
 		rdbtnVisitaDia.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		rdbtnVisitaDia.setBounds(204, 104, 188, 23);
 		contentPane.add(rdbtnVisitaDia);
 		
-		JRadioButton rdbtnVisitaMes = new JRadioButton("Consultar Visitas do M\u00EAs");
+		rdbtnVisitaMes = new JRadioButton("Consultar Visitas do M\u00EAs");
 		rdbtnVisitaMes.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		rdbtnVisitaMes.setBounds(204, 128, 188, 23);
 		contentPane.add(rdbtnVisitaMes);
