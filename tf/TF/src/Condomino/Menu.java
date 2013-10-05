@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+
+import javax.swing.ButtonGroup;
 import javax.swing.SwingConstants;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
@@ -81,6 +83,15 @@ public class Menu extends JFrame {
 		rdbtnVisitaMes.setBounds(204, 128, 188, 23);
 		contentPane.add(rdbtnVisitaMes);
 		
+		//Group radio buttons
+		 ButtonGroup group = new ButtonGroup();
+		 group.add(rdbtnCadastrarVisitante);
+	     group.add(rdbtnCadastrarMorador);
+	     group.add(rdbtnVisitaDia);
+	     group.add(rdbtnVisitaMes);
+	    
+	 
+		
 		JButton btnOk = new JButton("OK");
 		btnOk.addActionListener(new ActionListener() {
 		
@@ -93,6 +104,8 @@ public class Menu extends JFrame {
 	}
 	
 	private void redirecionamento() {
+		
+		
 		
 		
 		
