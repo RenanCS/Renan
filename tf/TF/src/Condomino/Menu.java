@@ -1,25 +1,13 @@
 package Condomino;
 
-import java.awt.BorderLayout;
+
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import java.awt.Font;
-
-import javax.swing.ButtonGroup;
-import javax.swing.SwingConstants;
-import javax.swing.JRadioButton;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class Menu extends JFrame {
 
 	private JPanel contentPane;
-
+	private String radioSelecionado;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -40,15 +28,6 @@ public class Menu extends JFrame {
 	 * Create the frame.
 	 */
 	public Menu() {
-		
-		JRadioButton rdbtnCadastrarVisitante;
-		JRadioButton rdbtnCadastrarMorador;
-		JRadioButton rdbtnVisitaDia;
-		JRadioButton rdbtnVisitaMes;
-		
-		
-		
-		
 		setTitle("Alpro2 - Menu");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -63,55 +42,70 @@ public class Menu extends JFrame {
 		lblMenu.setBounds(124, 31, 156, 44);
 		contentPane.add(lblMenu);
 		
-		rdbtnCadastrarVisitante = new JRadioButton("Cadastrar Visitante");
+		final JRadioButton rdbtnCadastrarVisitante = new JRadioButton("Cadastrar Visitante");
 		rdbtnCadastrarVisitante.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		rdbtnCadastrarVisitante.setBounds(32, 102, 156, 23);
 		contentPane.add(rdbtnCadastrarVisitante);
 		
-		rdbtnCadastrarMorador = new JRadioButton("Cadastrar Morador");
+		final JRadioButton rdbtnCadastrarMorador = new JRadioButton("Cadastrar Morador");
 		rdbtnCadastrarMorador.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		rdbtnCadastrarMorador.setBounds(32, 128, 156, 23);
 		contentPane.add(rdbtnCadastrarMorador);
 		
-		rdbtnVisitaDia = new JRadioButton("Consultar Visitas do Dia");
+		final JRadioButton rdbtnVisitaDia = new JRadioButton("Consultar Visitas do Dia");
 		rdbtnVisitaDia.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		rdbtnVisitaDia.setBounds(204, 104, 188, 23);
 		contentPane.add(rdbtnVisitaDia);
 		
-		rdbtnVisitaMes = new JRadioButton("Consultar Visitas do M\u00EAs");
+		final JRadioButton rdbtnVisitaMes = new JRadioButton("Consultar Visitas do M\u00EAs");
 		rdbtnVisitaMes.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		rdbtnVisitaMes.setBounds(204, 128, 188, 23);
 		contentPane.add(rdbtnVisitaMes);
 		
-		//Group radio buttons
-		 ButtonGroup group = new ButtonGroup();
-		 group.add(rdbtnCadastrarVisitante);
-	     group.add(rdbtnCadastrarMorador);
-	     group.add(rdbtnVisitaDia);
-	     group.add(rdbtnVisitaMes);
-	     final String radioSelecionado;  
-		 radioSelecionado = group.getSelection().getActionCommand();  
-	
-	    
-	 
+		ButtonGroup opcao = new ButtonGroup();
+		opcao.add(rdbtnVisitaMes);
+		opcao.add(rdbtnVisitaDia);
+		opcao.add(rdbtnCadastrarMorador);
+		opcao.add(rdbtnCadastrarVisitante);
+
 		
 		JButton btnOk = new JButton("OK");
 		btnOk.addActionListener(new ActionListener() {
 		
 			public void actionPerformed(ActionEvent e) {
 				
-				redirecionamento(radioSelecionado);
+				if(rdbtnVisitaDia.isSelected()){
+				     Inteface visitante  = new Inteface();  
+		             visitante.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
+		             visitante.setLocationRelativeTo(null);  
+		             visitante.setVisible(true);  
+					
+				}
+				if(rdbtnVisitaMes.isSelected()){
+					
+				}
+				if(rdbtnCadastrarMorador.isSelected()){
+					
+					
+				}
+				if(rdbtnCadastrarVisitante.isSelected()){
+					  Inteface visitante  = new Inteface();  
+			          visitante.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
+			          visitante.setLocationRelativeTo(null);  
+			          visitante.setVisible(true);  
+				}
+				
+				
 			}
 		});
 		btnOk.setBounds(140, 195, 156, 33);
 		contentPane.add(btnOk);
 	}
 	
-	private void redirecionamento(String radioSelecionado) {
+	private void redirecionamento() {
 		
 		
 		
-
 		
 }
 

@@ -1,26 +1,6 @@
 package Condomino;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-
-import java.awt.Font;
-
-import javax.swing.SwingConstants;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Window.Type;
-import java.awt.Frame;
-import java.awt.Dimension;
-import java.awt.ComponentOrientation;
 
 public class Inteface extends JFrame {
 	
@@ -122,10 +102,9 @@ public class Inteface extends JFrame {
 				pes.setCPF(Integer.parseInt(CPF));
 				pes.setNapto(Integer.parseInt(apto));			
 				memoria.adicionaPes(pes); 
+				JOptionPane.showMessageDialog(null,"Cadastro do Visitante Efetuado com Sucesso!");
+				dispose();
 				
-				//NAO CONSIGO FECHAR O JFRAME
-				setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-				//NÃO CONSIGO FECHAR O JFRAME APOS VERIFICAR AS ETAPAS
 			
 	
 			}
