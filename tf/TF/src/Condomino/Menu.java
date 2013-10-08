@@ -75,21 +75,28 @@ public class Menu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				if(rdbtnVisitaDia.isSelected()){
-				     Inteface visitante  = new Inteface();  
-		             visitante.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
-		             visitante.setLocationRelativeTo(null);  
-		             visitante.setVisible(true);  
-					
+				  IntefaceConsultaMes mes  = new IntefaceIntefaceConsultaMes();  
+			          mes.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
+			          mes.setLocationRelativeTo(null);  
+			          mes.setVisible(true);  
+			
 				}
 				if(rdbtnVisitaMes.isSelected()){
+				  IntefaceConsultaMes mes  = new IntefaceIntefaceConsultaMes();  
+			          mes.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
+			          mes.setLocationRelativeTo(null);  
+			          mes.setVisible(true);  
 					
 				}
 				if(rdbtnCadastrarMorador.isSelected()){
-					
+				InterfaceMorador morador  = new IntefaceMorador();  
+		        	morador.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
+		                morador.setLocationRelativeTo(null);  
+		                morador.setVisible(true);  
 					
 				}
 				if(rdbtnCadastrarVisitante.isSelected()){
-					  Inteface visitante  = new Inteface();  
+				  Inteface visitante  = new Inteface();  
 			          visitante.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
 			          visitante.setLocationRelativeTo(null);  
 			          visitante.setVisible(true);  
